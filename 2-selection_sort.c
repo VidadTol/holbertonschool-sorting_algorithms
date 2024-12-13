@@ -13,16 +13,16 @@ void selection_sort(int *array, size_t size)
 
 	for (i = 0; i < size - 1; i++)
 	{
-		min_idx = i; /* Suppose que le minimum est le premier élément*/
+		min_idx = i; /* min est le premier élément*/
 
-		/*Trouver l'élément minimum dans la partie non triée du tableau*/
+		/*Trouve l'élément min ds la partie non triée du tableau*/
 		for (j = i + 1; j < size; j++)
 		{
 			if (array[j] < array[min_idx])
 				min_idx = j;
 		}
 
-		/* Échanger l'élément minimum trouvé avec le premier élément*/
+		/* Échange l'élément mini trouvé avec le premier élément*/
 		if (min_idx != i)
 		{
 			temp = array[i];
